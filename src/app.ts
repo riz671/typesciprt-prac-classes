@@ -1,9 +1,11 @@
-interface Name {
+interface Named {
   name: string;
 }
 
-interface Greetable extends Name {
-  age: number;
+// The greetable interface inherits the property blueprint of Named
+interface Greetable extends Named {
+  // the question mark after age means age parameter will be optional to put
+  age?: number;
 
   greet(phrase: string): void;
 }
